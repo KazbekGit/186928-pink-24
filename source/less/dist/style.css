@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/source/fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
+  font-display: swap;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.page__body {
+  width: 320px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+}
+.page-header {
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.page-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 21px;
+  padding-bottom: 22px;
+}
+.logo {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+.main-nav {
+  background-color: #283645;
+}
+.main-nav__list {
+  list-style-type: none;
+}
+.intro {
+  min-height: 733px;
+  margin-top: -66px;
+  padding-top: calc(66px + 29px);
+  box-sizing: border-box;
+  background-color: #283645;
+  background-image: url("../../img/phone.png"), url("../../img/screen-theater.jpg"), url("../../img/back-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 176px, 104px 209px, 0 0;
+}
+.intro__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.intro__header {
+  margin: 0;
+  padding: 0;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 29px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 348px;
+}
+.intro__button {
+  margin-bottom: 38px;
+}
+.intro__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.intro__download-info {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  color: white;
+}
