@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="form-page" lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +7,19 @@
   <link rel="stylesheet" href="css/style.css">
   <title>Пинк.Форма</title>
 </head>
-<body class="form-page__body">
+<body class="page__body">
   <header class="page-header">
     <div class="wrapper page-header__wrapper">
       <a class="logo" href="index.html" aria-label="Логотип Пинк">
-        <img class="logo__img" src="/source/img/pink.svg" alt="pink-logo" width="74" height="23">
+        <img class="logo__img" src="../img/pink.svg" alt="pink-logo" width="74" height="23">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a class="main-nav__item--link" href="index.html" aria-label="Главная">Главная</a></li>
-          <li class="main-nav__item"><a class="main-nav__item--link" href="catalog.html" aria-label="Фотографии">Фотографии</a></li>
-          <li class="main-nav__item main-nav__item--current"><a class="main-nav__item--link" href="form.html" aria-label="Конкурс">Конкурс</a></li>
-          <li class="main-nav__item"><a class="main-nav__item--link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a></li>
+        <ul class="main-nav__list visually-hidden">
+          <li class="main-nav__item"><a class="main-nav__item-link" href="index.html" aria-label="Главная">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__item-link" href="catalog.html" aria-label="Фотографии">Фотографии</a></li>
+          <li class="main-nav__item main-nav__item--current"><a class="main-nav__item-link" href="form.html" aria-label="Конкурс">Конкурс</a></li>
+          <li class="main-nav__item"><a class="main-nav__item-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a></li>
           </ul>
       </nav>
     </div>
@@ -29,68 +29,89 @@
       Конкурс на самое безбашенное путешествие с Пинк
     </h2>
     <form class="main-form" action="https://echo.htmlacademy.ru" method="post">
-      <p class="main-form__title">
-        Поделитесь своей историей и
-        получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-      </p>
-      <fieldset class="main-form__fieldset main-form__user-info">
-        <legend class="visually-hidden">ФИО пользователя</legend>
-        <label class="main-form__label" for="user-surname" aria-label="Фамилия">Фамилия</label>
-        <input class="main-form__input main-form__input-surname" type="text" id="user-surname" name="surname" placeholder="укажите фамилию *" required>
-        <label class="main-form__label" for="user-name">Имя</label>
-        <input class="main-form__input main-form__input-name" type="text" id="user-name" aria-label="Имя" name="name" placeholder="Введите ваше имя *" required>
-        <label class="main-form__label" for="user-lastname">Отчество</label>
-        <input class="main-form__input main-form__input-lastname" type="text" id="user-lastname" aria-label="Отчество" name="lastname" placeholder="Ну и отчество тоже">
-      </fieldset>
+      <div class="wrapper main-form__wrapper">
+        <p class="main-form__title">
+          Поделитесь своей историей и
+          получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        </p>
+        <fieldset class="main-form__fieldset main-form__user-info">
+          <legend class="visually-hidden">ФИО пользователя</legend>
+          <label class="main-form__header" for="user-surname" aria-label="Фамилия">Фамилия</label>
+          <input class="main-form__input main-form__input-surname" type="text" id="user-surname" name="surname" placeholder="Укажите фамилию *" required>
+          <label class="main-form__header" for="user-name">Имя</label>
+          <input class="main-form__input main-form__input-name" type="text" id="user-name" aria-label="Имя" name="name" placeholder="Введите ваше имя *" required>
+          <label class="main-form__header" for="user-middlename">Отчество</label>
+          <input class="main-form__input main-form__input-middlename" type="text" id="user-middlename" aria-label="Отчество" name="middlename" placeholder="Ну и отчество тоже">
+        </fieldset>
+      </div>
       <fieldset class="main-form__fieldset main-form__user-achievements">
-        <legend class="main-form__header">Ваши безбашенные достижения в путешествии</legend>
-        <label class="main-form__checkbox-label" for="shark">Сделал селфи с акулой</label>
-        <input class="main-form__checkbox" type="checkbox" checked name="selfi-with-shark" id="shark" aria-label="Сделал селфи с акулой">
-
-        <label class="main-form__checkbox-label" for="beach">Обгорел на пляже</label>
-        <input class="main-form__checkbox" type="checkbox" checked name="burned-on-the-beach" id="beach" aria-label="Обгорел на пляже">
-
-        <label class="main-form__checkbox-label" for="chuck">Видел Чака Норриса</label>
-        <input class="main-form__checkbox" type="checkbox" name="see-chuck-norris" id="chuck" aria-label="Видел Чака Норриса">
-
-        <label class="main-form__checkbox-label" for="souvenir">Накупил сувениров</label>
-        <input class="main-form__checkbox" type="checkbox" name="buy-souvenirs" id="souvenir" aria-label="Накупил сувениров">
-
-        <label class="main-form__checkbox-label" for="tower">Удержал башню</label>
-        <input class="main-form__checkbox" type="checkbox" checked name="held-the-tower" id="tower" aria-label="Удержал башню">
-
-        <label class="main-form__checkbox-label" for="hotel">Разгромил отель</label>
-        <input class="main-form__checkbox" type="checkbox" name="crush-the-hotel" id="hotel" aria-label="Разгромил отель">
+        <legend class="main-form__header main-form__header--small-line-height"><span class="main-form__header-text">Ваши безбашенные достижения в путешествии</span></legend>
+        <ul class="main-form__checkbox-list" role="none">
+          <li class="main-form__checkbox-item">
+            <label class="main-form__abel" for="shark">Сделал селфи с акулой</label>
+            <input class="main-form__checkbox" type="checkbox" checked name="selfi-with-shark" id="shark" aria-label="Сделал селфи с акулой">
+          </li>
+          <li class="main-form__checkbox-item">
+            <label class="main-form__label" for="beach">Обгорел на пляже</label>
+            <input class="main-form__checkbox" type="checkbox" checked name="burned-on-the-beach" id="beach" aria-label="Обгорел на пляже">
+          </li>
+          <li class="main-form__checkbox-item">
+            <label class="main-form__label" for="chuck">Видел Чака Норриса</label>
+            <input class="main-form__checkbox" type="checkbox" name="see-chuck-norris" id="chuck" aria-label="Видел Чака Норриса">
+          </li>
+          <li class="main-form__checkbox-item">
+            <label class="main-form__label" for="souvenir">Накупил сувениров</label>
+            <input class="main-form__checkbox" type="checkbox" name="buy-souvenirs" id="souvenir" aria-label="Накупил сувениров">
+          </li>
+          <li class="main-form__checkbox-item">
+            <label class="main-form__label" for="tower">Удержал башню</label>
+            <input class="main-form__checkbox" type="checkbox" checked name="held-the-tower" id="tower" aria-label="Удержал башню">
+          </li>
+          <li class="main-form__checkbox-item">
+            <label class="main-form__label" for="hotel">Разгромил отель</label>
+            <input class="main-form__checkbox" type="checkbox" name="crush-the-hotel" id="hotel" aria-label="Разгромил отель">
+          </li>
+        </ul>
       </fieldset>
-      <fieldset class="main-form__fieldset main-form__tel-adress">
-        <legend class="main-form__header">контактная информация</legend>
-        <h3 class="main-form__title"><label for="tel">Номер телефона</label></h3>
-        <input class="main-form__tel" type="tel" id="tel" name="tel" placeholder="Номер, пожалуйста" aria-label="Номер телефона">
-        <h3 class="main-form__title"><label for="e-mail">Адрес почты</label></h3>
-        <input class="main-form__checkbox" type="email" id="e-mail" name="e-mail" placeholder="Введите почту *" aria-label="Адрес почты" required>
-      </fieldset>
+      <div class="wrapper main-form__wrapper">
+        <fieldset class="main-form__fieldset main-form__tel-address">
+          <legend class="main-form__header visually-hidden">контактная информация</legend>
+          <h3 class="main-form__header"><label class="main-form__header-text for="tel">Номер телефона</label></h3>
+          <input class="main-form__input main-form__tel" type="tel" id="tel" name="tel" placeholder="Номер, пожалуйста" aria-label="Номер телефона">
+          <h3 class="main-form__header main-form__header--small-margin"><label class="main-form__header-text" for="e-mail">Адрес почты</label></h3>
+          <input class=" main-form__input main-form__checkbox" type="email" id="e-mail" name="e-mail" placeholder="Введите почту *" aria-label="Адрес почты" required>
+        </fieldset>
+      </div>
       <fieldset class="main-form__fieldset main-form__application-type">
-        <legend class="main-form__header">С каким приложением путешествовали?</legend>
-        <label class="main-form__label" for="app">Pink для iOS</label>
-        <input class="main-form__radio" type="radio" name="application-type" id="ios" aria-label="Pink для iOS">
-        <label class="main-form__label" for="app">Pink на Android</label>
-        <input class="main-form__radio" type="radio" name="application-type" id="android" aria-label="Pink на Android">
-        <label class="main-form__label" for="app">Windows Phone</label>
-        <input class="main-form__radio" type="radio" name="application-type" id="windows" aria-label="Windows Phone">
+        <legend class="main-form__header main-form__header--small-line-height">С каким приложением путешествовали?</legend>
+        <ul class="main-form__radio-list">
+          <li class="main-form__radio-list">
+            <label class="main-form__label" for="app">Pink для iOS</label>
+            <input class="main-form__radio" type="radio" name="application-type" id="ios" aria-label="Pink для iOS">
+          </li>
+          <li>
+            <label class="main-form__label" for="app">Pink на Android</label>
+            <input class="main-form__radio" type="radio" name="application-type" id="android" aria-label="Pink на Android">
+          </li>
+          <li>
+            <label class="main-form__label" for="app">Windows Phone</label>
+            <input class="main-form__radio" type="radio" name="application-type" id="windows" aria-label="Windows Phone">
+          </li>
+        </ul>
       </fieldset>
-      <fieldset class="main-form__fieldset">
-        <legend class="main-form__header"><label for="review">Опишите свои эмоции</label></legend>
-        <textarea class="main-form__textarea" name="review" id="user-review" cols="30" rows="10" aria-label="Опишите свои эмоции">Можно прям в красках, не стесняясь в выражениях</textarea>
-      </fieldset>
+      <div class="wrapper main-form__wrapper">
+        <fieldset class="main-form__fieldset main-form__review">
+          <legend class="main-form__header main-form__review-header">
+            <label for="user-review">Опишите свои эмоции</label></legend>
+          <textarea class="main-form__text-area" name="review" id="user-review" cols="30" rows="10" aria-label="Опишите свои эмоции">Можно прям в красках, не стесняясь в выражениях</textarea>
+        </fieldset>
+
       <button class="button main-form__button-submit" type="submit" aria-label="Отправить форму">Отправить форму</button>
-      <p class="main-form__footnote">* — обязательные поля</p>
+      <p class="main-form__footnote"><span class="main-form__footnote-star">*</span> — обязательные поля</p>
+    </div>
       <div class="popup popup--success">
         <h3 class="popup__header">Ваша заявка отправлена</h3>
-        <p class="popup__text">Спасибо за ваше участие, ваша заявка
-          уже поступила к нам. В ближайшее
-          время мы рассмотрим ее и
-          оповестим вас.
-        </p>
+        <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
         <button class="button popup__button" type="button" aria-label="Закрыть окно">Закрыть окно</button>
       </div>
       <div class="popup popup--failure">
@@ -104,30 +125,30 @@
   </main>
   <footer class="page-footer">
     <div class="wrapper page-footer__wrapper">
-      <a class="logo" href="index.html" aria-label="Логотип Пинк">
-        <img class="logo__img" src="/source/img/logotype-blue-tablet.svg" alt="pink-tablet-logo" width="145" height="40">
+      <a class="logo page-footer__logo" href="index.html" aria-label="Логотип Пинк">
+        <img class="logo__img" src="../img/logotype-blue-tablet.svg" alt="pink-tablet-logo" width="145" height="40">
       </a>
       <ul class="social">
         <li class="social__item social__item--twitter">
           <a class="social__link" href="https://twitter.com" aria-label="Twitter">
-            <img class="social__img" src="/source/img/twitter.svg" alt="Twitter-logo" width="18" height="14">
+            <img class="social__img" src="../img/twitter.svg" alt="Twitter-logo" width="18" height="14">
           </a>
         </li>
         <li class="social__item social__item--facebook">
           <a class="social__link" href="https://www.facebook.com" aria-label="Facebook">
-            <img class="social__img" src="/source/img/facebook.svg" alt="Facebook-logo" width="9" height="18">
+            <img class="social__img" src="../img/facebook.svg" alt="Facebook-logo" width="9" height="18">
           </a>
         </li>
         <li class="social__item social__item--youtube">
           <a class="social__link" href="https://www.youtube.com" aria-label="YouTube">
-            <img class="social__img" src="/source/img/youtube.svg" alt="YouTube-logo" width="15" height="13">
+            <img class="social__img" src="../img/youtube.svg" alt="YouTube-logo" width="15" height="13">
           </a>
         </li>
       </ul>
       <div class="page-footer__developer">
         <p class="page-footer__developer-title">Разработано</p>
         <a class="page-footer__developer-link" href="https://up.htmlacademy.ru/adaptive/24" aria-label="HTMLAcademy">
-          <img class="page-footer__developer-img" src="/source/img/htmlacademy.svg" alt="htmlacademy-logo" width="27" height="34">
+          <img class="page-footer__developer-img" src="../img/htmlacademy.svg" alt="htmlacademy-logo" width="27" height="34">
         </a>
       </div>
     </div>

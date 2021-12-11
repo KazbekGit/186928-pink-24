@@ -8,16 +8,16 @@
   <body class="page__body">
       <header class="page-header">
         <div class="wrapper page-header__wrapper">
-          <a class="logo" href="index.html" aria-label="Логотип Пинк">
+          <a class="logo page-header__logo" href="index.html" aria-label="Логотип Пинк">
             <img class="logo__img" src="img/pink.svg" alt="pink-logo" width="74" height="23">
           </a>
           <nav class="main-nav">
             <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-            <ul class="main-nav__list visually-hidden">
-              <li class="main-nav__item"><a class="main-nav__item--link" href="index.html" aria-label="Главная">Главная</a></li>
-              <li class="main-nav__item"><a class="main-nav__item--link" href="catalog.html" aria-label="Фотографии">Фотографии</a></li>
-              <li class="main-nav__item main-nav__item--current"><a class="main-nav__item--link" href="form.html" aria-label="Конкурс">Конкурс</a></li>
-              <li class="main-nav__item"><a class="main-nav__item--link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a></li>
+            <ul class="main-nav__list">
+              <li class="main-nav__item"><a class="main-nav__item-link" href="index.html" aria-label="Главная">Главная</a></li>
+              <li class="main-nav__item"><a class="main-nav__item-link" href="catalog.html" aria-label="Фотографии">Фотографии</a></li>
+              <li class="main-nav__item main-nav__item--current"><a class="main-nav__item-link" href="form.html" aria-label="Конкурс">Конкурс</a></li>
+              <li class="main-nav__item"><a class="main-nav__item-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a></li>
               </ul>
           </nav>
         </div>
@@ -48,9 +48,11 @@
           </div>
         </section>
         <section class="information">
+          <div class="information__header-block">
+              <h2 class="information__header">Устали от серости мегаполиса?</h2>
+              <h2 class="information__header">Нам есть, что вам<br> предложить!</h2>
+          </div>
           <div class="wrapper information__wrapper">
-            <h2 class="information__header">Устали от серости мегаполиса?</h2>
-            <h2 class="information__header">Нам есть, что вам<br> предложить!</h2>
             <ul class="information__list">
               <li class="information__term">
                 <h2 class="information__term-title">Поднимает настроение</h2>
@@ -72,7 +74,7 @@
                 и доказали, что положительный эффект
                 от использования приложения длится целые сутки!
               </p>
-              <a class="information__diagram-link href="#noscroll" aria-label="Узнать больше об исследовании">Узнать больше об исследовании</a>
+              <a class="information__diagram-link" href="#noscroll" aria-label="Узнать больше об исследовании">Узнать больше об исследовании</a>
             </div>
           </div>
         </section>
@@ -95,11 +97,11 @@
         </section>
         <section class="prices">
           <h2 class="visually-hidden">Цены</h2>
-          <div class="wrapper prices__wrapper">
+          <div class="wrapper prices__wrapper slider">
             <table class="prices__table">
               <tbody class="prices__table-body">
                 <tr class="prices__row">
-                    <th class="prices__header">База<span class="prices__header-cost">1,99 USD</span></th>
+                  <th class="prices__header">База<span class="prices__header-cost">1,99 USD</span></th>
                   <th class="prices__header prices__header--hit">Стандарт<span class="prices__header-cost">3,99 USD</span></th>
                   <th class="prices__header">Анлим<span class="prices__header-cost">9,99 USD</span></th>
                 </tr>
@@ -109,16 +111,14 @@
                   <td class="prices__column prices__column--checked">Розовый фильтр</td>
                 </tr>
                 <tr class="prices__row">
-                  <td class="prices__column">Смайлики</td>
-                  <td class="prices__column prices__column--unchecked"></td>
-                  <td class="prices__column prices__column--checked"></td>
-                  <td class="prices__column prices__column--checked"></td>
+                  <td class="prices__column prices__column--unchecked">Смайлики</td>
+                  <td class="prices__column prices__column--checked">Смайлики</td>
+                  <td class="prices__column prices__column--checked">Смайлики</td>
                 </tr>
                 <tr class="prices__row">
-                  <td class="prices__column">Комментарии</td>
-                  <td class="prices__column prices__column--unchecked"></td>
-                  <td class="prices__column prices__column--unchecked"></td>
-                  <td class="prices__column prices__column--checked"></td>
+                  <td class="prices__column prices__column--unchecked">Комментарии</td>
+                  <td class="prices__column prices__column--unchecked">Комментарии</td>
+                  <td class="prices__column prices__column--checked">Комментарии</td>
                 </tr>
               </tbody>
             </table>
@@ -135,24 +135,24 @@
             <ul class="contacts__list">
               <li class="contacts__item">
                 <p class="contacts__subtitle">Звоните:</p>
-                <a class="contacts__tel" href="tel:+78125556666" aria-label="Телефон">+7 (812) 555-66-66</a>
+                <a class="contacts__tel contacts__text" href="tel:+78125556666" aria-label="Телефон">+7 (812) 555-66-66</a>
               </li>
               <li class="contacts__item">
                 <p class="contacts__subtitle">Пишите:</p>
-                <a class="contacts__e-mail" href="mailto:mail@htmlacademy.ru" aria-label="Электронная почта">mail@htmlacademy.ru</a>
+                <a class="contacts__e-mail contacts__text" href="mailto:mail@htmlacademy.ru" aria-label="Электронная почта">mail@htmlacademy.ru</a>
               </li>
               <li class="contacts__item">
                 <p class="contacts__subtitle">Приезжайте в гости:</p>
-                <address class="contacts__address">ул. Большая Конюшенная, 19/8</address>
+                <address class="contacts__address contacts__text">ул. Большая Конюшенная, 19/8</address>
               </li>
             </ul>
-            <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638044099803!5m2!1sru!2sru"  height="200" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
           </div>
+            <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638044099803!5m2!1sru!2sru"  height="200" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
       </main>
       <footer class="page-footer">
         <div class="wrapper page-footer__wrapper">
-          <a class="logo" href="index.html" aria-label="Логотип Пинк">
+          <a class="logo page-footer__logo" href="index.html" aria-label="Логотип Пинк">
             <img class="logo__img" src="img/logotype-blue-tablet.svg" alt="pink-tablet-logo" width="145" height="40">
           </a>
           <ul class="social">
