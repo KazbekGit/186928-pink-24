@@ -19,6 +19,8 @@
 }
 
 .main-form__fieldset {
+  display: flex;
+  flex-direction: column;
   padding: 0;
   margin: 0;
   border: none;
@@ -46,6 +48,22 @@
     line-height: 18px;
     text-align: center;
   }
+
+  &--legend {
+    box-sizing: border-box;
+    background-color: @grey;
+    height: 75px;
+    padding-top: 39px;
+    padding-left: 51px;
+    padding-right: 51px;
+  }
+}
+
+.main-form__application-type .main-form__header--legend {
+  height: 29px;
+  padding-top: 44px;
+  padding-left: 71px;
+  padding-right: 71px;
 }
 
 .main-form__e-mail {
@@ -108,6 +126,7 @@
   row-gap: 69px;
   list-style-type: none;
   margin: 0;
+  margin-top: 53px;
   padding: 0;
   padding-left: calc(22px + 56px);
 }
@@ -161,7 +180,7 @@
   color: @blue-basic;
 }
 
-.main-form__button-submit {
+.main-form__button {
   background-color: @green;
   color: @white;
   text-transform: uppercase;
@@ -172,6 +191,9 @@
   line-height: 30px;
   text-align: center;
   border-radius: 2px;
+}
+
+.main-form__button-submit {
   margin-bottom: 46px;
 }
 

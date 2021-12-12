@@ -1,0 +1,68 @@
+.upload {
+  padding: 0;
+  margin: 0;
+}
+
+.upload__wrapper {
+  background-color: @grey;
+  padding-top: 20px;
+  padding-bottom: 41px;
+}
+
+.upload__header {
+  padding: 0;
+  margin: 0;
+  margin-top: 49px;
+  margin-bottom: 52px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+
+.upload__img {
+  display: block;
+  margin-bottom: 43px;
+}
+
+.upload__settings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 38px;
+  border-bottom: 1px solid @blue-basic-transparent;
+  padding-bottom: 34px;
+}
+
+.upload__block {
+  margin-right: 35px;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+.upload__button {
+  border-radius: 30px;
+  min-height: 55px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+
+  &--active {
+    border: 2px solid @pink;
+    color: @pink;
+  }
+
+  &--disabled {
+    color: @blue-basic-transparent;
+    border: 2px solid @blue-basic-transparent;
+  }
+
+  &:first-of-type {
+    margin-bottom: 12px;
+  }
+}
