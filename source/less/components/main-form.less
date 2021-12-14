@@ -1,5 +1,6 @@
 .main-form {
-  padding-top: 52px;
+  padding-top: 54px;
+  padding-bottom: 26px;
 }
 
 .main-form__wrapper {
@@ -41,29 +42,27 @@
   margin-left: 21px;
   margin-bottom: 18px;
 
-  &--small-line-height {
-    display: block;
-    margin: 0;
+  &--achievements {
     padding: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    position: absolute;
+    width: 218px;
+    text-align: center;
+    line-height: 18px;
+  }
+
+  &--application-type {
+    width: 178px;
+    padding: 0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    position: absolute;
     line-height: 18px;
     text-align: center;
   }
-
-  &--legend {
-    box-sizing: border-box;
-    background-color: @grey;
-    height: 75px;
-    padding-top: 39px;
-    padding-left: 51px;
-    padding-right: 51px;
-  }
-}
-
-.main-form__application-type .main-form__header--legend {
-  height: 29px;
-  padding-top: 44px;
-  padding-left: 71px;
-  padding-right: 71px;
 }
 
 .main-form__e-mail {
@@ -94,7 +93,7 @@
 }
 
 .main-form__user-info {
-  padding-bottom: 44px;
+  padding-bottom: 45px;
 }
 
 .main-form__input-surname {
@@ -106,10 +105,13 @@
 }
 
 .main-form__user-achievements {
-  padding: 0;
+  position: relative;
+  padding-top: 41px;
+  padding-left: 22px;
+  padding-right: 22px;
+  padding-bottom: 45px;
   margin: 0;
   background-color: @grey;
-  padding-bottom: 55px;
 }
 
 .main-form__label {
@@ -120,23 +122,19 @@
 }
 
 .main-form__checkbox-list {
+  margin: 0;
+  padding: 0;
+  padding-top: 73px;
+  padding-left: 55px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   row-gap: 69px;
   list-style-type: none;
-  margin: 0;
-  margin-top: 53px;
-  padding: 0;
-  padding-left: calc(22px + 56px);
 }
 
 .main-form__tel {
   margin-bottom: 32px;
-}
-
-.main-form__header--small-margin {
-  margin-bottom: 14px;
 }
 
 .main-form__tel-address {
@@ -145,11 +143,12 @@
 }
 
 .main-form__application-type {
-  padding-top: 52px;
-  padding-bottom: 54px;
+  position: relative;
+  padding-top: 42px;
+  padding-bottom: 42px;
   padding-left: 22px;
+  padding-right: 22px;
   background-color: @grey;
-  margin-bottom: 44px;
 }
 
 .main-form__radio-list {
@@ -157,17 +156,25 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
+  padding-top: 70px;
+}
+
+.main-form__review {
+  margin-top: 42px;
+  margin-bottom: 52px;
 }
 
 .main-form__review-header {
+  padding: 0;
+  margin: 0;
   margin-bottom: 22px;
+  text-align: center;
 }
 
 .main-form__text-area {
   width: 100%;
   padding-left: 20px;
   padding-top: 22px;
-  margin-bottom: 52px;
   box-sizing: border-box;
   border: 2px solid @grey-light;
   border-radius: 2px;
@@ -199,7 +206,6 @@
 
 .main-form__footnote {
   margin: 0;
-  margin-bottom: 26px;
   padding: 0;
   font-size: 14px;
   font-style: normal;
