@@ -1,0 +1,21 @@
+.slider__toggle {
+  border: none;
+  padding: 0;
+  margin-right: 9px;
+  width: 6px;
+  height: 6px;
+  background-color: @blue-basic;
+  opacity: 0.3;
+  border-radius: 50%;
+  box-sizing: content-box;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &--current {
+    background-color: @white;
+    border: 3px solid @blue-basic;
+    opacity: 1;
+  }
+}
