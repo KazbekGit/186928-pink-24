@@ -153,17 +153,26 @@
 .information__diagram {
   position: relative;
   display: none;
-  padding-left: 310px;
+  padding-left: 330px;
+  padding-right: 20px;
   padding-top: 102px;
-  padding-bottom: 78px;
+  padding-bottom: 27px;
   text-align: left;
   background-image: url("../img/clock-24.png");
   background-repeat: no-repeat;
-  background-position: 0 54px;
+  background-position: 20px bottom;
   background-size: 238px 276px;
 
   @media (min-width: @tablet-width) {
     display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 500px;
+    padding-bottom: 120px;
+    padding-right: 180px;
+    background-position: 131px 17px;
+    background-color: @grey;
   }
 }
 
@@ -177,15 +186,46 @@
   padding: 0;
   margin: 0;
   margin-bottom: 24px;
+  
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
 }
 
 .information__diagram-text {
   padding: 0;
   margin: 0;
   margin-bottom: 24px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;  
+  }
 }
 
 .information__diagram-link {
   color: @pink;
-  text-decoration: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+  }
 }

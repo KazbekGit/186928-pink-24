@@ -66,14 +66,14 @@
                 <p class="information__term-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
               </li>
             </ul>
-            <div class="information__diagram">
-              <h2  class="information__diagram-header">Эффект на 24 часа!</h2>
-              <p class="information__diagram-text">Британские ученые провели исследования
-                и доказали, что положительный эффект
-                от использования приложения длится целые сутки!
-              </p>
-              <a class="information__diagram-link" href="#noscroll" aria-label="Узнать больше об исследовании">Узнать больше об исследовании</a>
-            </div>
+          </div>
+          <div class="information__diagram">
+            <h2  class="information__diagram-header">Эффект на 24 часа!</h2>
+            <p class="information__diagram-text">Британские ученые провели исследования
+              и доказали, что положительный эффект
+              от использования приложения длится целые сутки!
+            </p>
+            <a class="information__diagram-link" href="#noscroll" aria-label="Узнать больше об исследовании">Узнать больше об исследовании</a>
           </div>
         </section>
         <section class="reviews">
@@ -83,13 +83,13 @@
               <blockquote class="reviews__item slider__item">
                 <cite class="reviews__author">Николай Петров</cite>
                 <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-                <p class="reviews__author-info visually-hidden">25 лет, водитель трамвая</p>
+                <p class="reviews__author-info">25 лет, водитель трамвая</p>
               </blockquote>
             </div>
             <p class="reviews__toggles slider__toggles">
-              <button class="slider__toggle slider__toggle--current" type="button"></button>
-              <button class="slider__toggle" type="button"></button>
-              <button class="slider__toggle" type="button"></button>
+              <button class="slider__toggle slider__review-toggle slider__review-toggle--left slider__toggle--current" type="button"></button>
+              <button class="slider__toggle slider__review-toggle slider__review-toggle--right" type="button"></button>
+              <button class="slider__toggle slider__review-toggle" type="button"></button>
             </p>
           </div>
         </section>
@@ -99,21 +99,25 @@
             <table class="prices__table">
               <tbody class="prices__table-body">
                 <tr class="prices__row">
+                  <th class="prices__header">&nbsp;</th>
                   <th class="prices__header">База<span class="prices__header-cost">1,99 USD</span></th>
                   <th class="prices__header prices__header--hit">Стандарт<span class="prices__header-cost">3,99 USD</span></th>
                   <th class="prices__header">Анлим<span class="prices__header-cost">9,99 USD</span></th>
                 </tr>
                 <tr class="prices__row">
+                  <td class="prices__column">Розовый фильтр</td>
                   <td class="prices__column prices__column--checked">Розовый фильтр</td>
                   <td class="prices__column prices__column--checked">Розовый фильтр</td>
                   <td class="prices__column prices__column--checked">Розовый фильтр</td>
                 </tr>
                 <tr class="prices__row">
+                  <td class="prices__column">Смайлики</td>
                   <td class="prices__column prices__column--unchecked">Смайлики</td>
                   <td class="prices__column prices__column--checked">Смайлики</td>
                   <td class="prices__column prices__column--checked">Смайлики</td>
                 </tr>
                 <tr class="prices__row">
+                  <td class="prices__column">Комментарии</td>
                   <td class="prices__column prices__column--unchecked">Комментарии</td>
                   <td class="prices__column prices__column--unchecked">Комментарии</td>
                   <td class="prices__column prices__column--checked">Комментарии</td>
@@ -121,9 +125,9 @@
               </tbody>
             </table>
             <p class="prices__toggles slider__toggles">
-              <button class="slider__toggle" type="button"></button>
-              <button class="slider__toggle slider__toggle--current" type="button"></button>
-              <button class="slider__toggle" type="button"></button>
+              <button class="slider__toggle slider__prices-toggle" type="button"></button>
+              <button class="slider__toggle slider__prices-toggle slider__toggle--current" type="button"></button>
+              <button class="slider__toggle slider__prices-toggle" type="button"></button>
             </p>
           </div>
         </section>
