@@ -31,12 +31,22 @@
 
 .reviews__author {
   display: block;
+  text-align: center;
+  margin-bottom: 31px;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 30px;
-  text-align: center;
-  margin-bottom: 31px;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+    margin-bottom: 17px;
+    font-size: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 24px;
+  }
 }
 
 .reviews__item {
@@ -62,19 +72,6 @@
     margin-right: 104px;
     margin-bottom: 51px;
     font-size: 18px;
-  }
-}
-
-.reviews__author {
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px;
-
-  @media (min-width: @tablet-width) {
-    order: 2;
-    margin-bottom: 17px;
-    font-size: 24px;
   }
 }
 
