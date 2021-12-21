@@ -75,6 +75,22 @@
   }
 }
 
+.contacts__item {
+  &--tel {
+    margin-bottom: 31px;
+  }
+
+  &--e-mail {
+    margin-bottom: 35px;
+  }
+
+  &--address {
+    @media (min-width: @tablet-width) {
+      width: 211px;
+    }
+  }
+}
+
 .contacts__subtitle {
   margin: 0;
   padding: 0;
@@ -104,12 +120,10 @@
 
 .contacts__tel {
   display: block;
-  margin-bottom: 31px;
 }
 
 .contacts__e-mail {
   display: block;
-  margin-bottom: 35px;
 }
 
 .contacts__map {
