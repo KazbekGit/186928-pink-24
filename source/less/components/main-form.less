@@ -1,22 +1,50 @@
 .main-form {
   padding-top: 54px;
   padding-bottom: 26px;
-}
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
-.main-form__wrapper {
-  padding-left: 22px;
-  padding-right: 22px;
+  @media (min-width: @tablet-width) {
+    padding-top: 91px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
 }
 
 .main-form__title {
   padding: 0;
   margin: 0;
-  margin-bottom: 55px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 45px;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 30px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    padding-left: 65px;
+    padding-right: 65px;
+    margin-bottom: 74px;
+  }
+}
+
+.main-form__title-last {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
 }
 
 .main-form__fieldset {
@@ -26,6 +54,15 @@
   margin: 0;
   border: none;
   color: @blue-basic;
+
+  @media (min-width: @tablet-width) {
+    border: 2px solid @grey-light;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
 }
 
 .main-form__header {
@@ -39,16 +76,13 @@
   text-align: left;
   color: @pink;
   text-transform: uppercase;
-  margin-left: 21px;
   margin-bottom: 18px;
 
   &--achievements {
     padding: 0;
     left: 0;
     right: 0;
-    margin: 0 auto;
     position: absolute;
-    width: 218px;
     text-align: center;
     line-height: 18px;
   }
@@ -61,6 +95,19 @@
     right: 0;
     position: absolute;
     line-height: 18px;
+    text-align: center;
+  }
+
+  &--contacts {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: inline-block;
+      text-align: center;
+    }
+  }
+
+  &--review {
     text-align: center;
   }
 }
@@ -92,15 +139,62 @@
   }
 }
 
-.main-form__user-info {
-  padding-bottom: 45px;
+.main-form__legend {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding: 0;
+    position: static;
+    display: block;
+    width: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 
-.main-form__input-surname {
+.main-form__user-info {
+  padding-bottom: 45px;
+  box-sizing: border-box;
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: min-content auto;
+    align-items: baseline;
+    row-gap: 56px;
+    column-gap: 20px;
+    padding-bottom: 51px;
+    order: 2;
+    border: none;
+    margin-right: 74px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    flex-grow: 1;
+  }
+}
+
+.main-form__user-info .main-form__header {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.main-form__user-info .main-form__input {
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
+.main-form__input--surname {
   margin-bottom: 27px;
 }
 
-.main-form__input-name {
+.main-form__input--name {
   margin-bottom: 28px;
 }
 
@@ -112,6 +206,12 @@
   padding-bottom: 45px;
   margin: 0;
   background-color: @grey;
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+    background-color: @white;
+    margin-bottom: 65px;
+  }
 }
 
 .main-form__label {
@@ -131,6 +231,12 @@
   flex-wrap: wrap;
   row-gap: 69px;
   list-style-type: none;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 58px;
+  }
 }
 
 .main-form__tel {
@@ -140,6 +246,21 @@
 .main-form__tel-address {
   padding-top: 41px;
   padding-bottom: 44px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: @tablet-width) {
+    order: 4;
+    margin-bottom: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 74px;
+  }
 }
 
 .main-form__application-type {
@@ -149,6 +270,19 @@
   padding-left: 22px;
   padding-right: 22px;
   background-color: @grey;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+    padding-left: 60px;
+    padding-top: 54px;
+    margin-bottom: 65px;
+    background-color: @white;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: auto;
+    flex-grow: 1;
+  }
 }
 
 .main-form__radio-list {
@@ -157,11 +291,31 @@
   padding: 0;
   margin: 0;
   padding-top: 70px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+  }
 }
 
 .main-form__review {
   margin-top: 42px;
   margin-bottom: 52px;
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 6;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 28px;
+    padding-bottom: 53px;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 70px;
+  }
 }
 
 .main-form__review-header {
@@ -173,8 +327,6 @@
 
 .main-form__text-area {
   width: 100%;
-  padding-left: 20px;
-  padding-top: 22px;
   box-sizing: border-box;
   border: 2px solid @grey-light;
   border-radius: 2px;
@@ -185,6 +337,38 @@
   line-height: 30px;
   text-align: left;
   color: @blue-basic;
+  min-height: 197px;
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 189px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 124px;
+  }
+}
+
+.main-form__button-block {
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: @mobile-width-only) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 7;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+  }
 }
 
 .main-form__button {
@@ -202,6 +386,14 @@
 
 .main-form__button-submit {
   margin-bottom: 46px;
+
+  @media (min-width: @tablet-width) {
+    width: 296px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
 .main-form__footnote {
@@ -212,6 +404,11 @@
   font-weight: 400;
   line-height: 30px;
   text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 140px;
+  }
 
   &::first-letter {
     color: @pink;
