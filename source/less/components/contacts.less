@@ -1,27 +1,40 @@
 .contacts {
-  padding-top: 50px;
+  padding-top: 47px;
   box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 74px;
+  }
 }
 
 .contacts__wrapper {
   position: relative;
-  padding-bottom: 22px;
+  padding-bottom: 41px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 26px;
+  }
 
   &::after {
     position: absolute;
     content: "";
-    width: 0;
-    height: 0;
-    border-color: @pink;
-    border-left: 160px solid transparent;
-    border-right: 160px solid transparent;
-    border-top: 51px solid @white;
-    bottom: -51px;
+    width: 100%;
+    height: 123px;
+    background-color: @white;
     left: 0;
+    bottom: -123px;
+    clip-path: polygon(50% 50%, 0 0, 100% 0);
   }
 }
-
 
 .contacts__header {
   margin: 0;
@@ -30,14 +43,52 @@
   font-size: 24px;
   font-style: normal;
   font-weight: 300;
-  line-height: 29px;
+  line-height: 28.8px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    width: 462px;
+    font-size: 40px;
+    line-height: 54px;
+    margin: 0 auto;
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    line-height: 68.09px;
+  }
 }
 
 .contacts__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 30px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.contacts__item {
+  &--tel {
+    margin-bottom: 31px;
+  }
+
+  &--e-mail {
+    margin-bottom: 35px;
+  }
+
+  &--address {
+    @media (min-width: @tablet-width) {
+      width: 211px;
+    }
+  }
 }
 
 .contacts__subtitle {
@@ -49,6 +100,12 @@
   font-weight: 700;
   line-height: 25px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 24.5px;
+    margin-bottom: 17px;
+  }
 }
 
 .contacts__text {
@@ -63,14 +120,20 @@
 
 .contacts__tel {
   display: block;
-  margin-bottom: 31px;
 }
 
 .contacts__e-mail {
   display: block;
-  margin-bottom: 35px;
 }
 
 .contacts__map {
   width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 374px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 502px;
+  }
 }

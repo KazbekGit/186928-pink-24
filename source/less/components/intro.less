@@ -1,6 +1,5 @@
 .intro {
   min-height: 733px;
-  margin-top: -69px;
   padding-top: calc(66px + 29px);
   box-sizing: border-box;
   background-color: @blue-basic;
@@ -11,7 +10,17 @@
 
 .intro__wrapper {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
 }
 
 .intro__header {
@@ -24,10 +33,30 @@
   text-align: center;
   color: @white;
   margin-bottom: 348px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 48px;
+    padding-left: 58px;
+    padding-right: 58px;
+    margin-bottom: 38px;
+    margin-top: 73px;
+  }
 }
 
 .intro__button {
   margin-bottom: 38px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  border: 2px solid @white;
+  border-radius: 30px;
+  min-height: 55px;
+  color: @white;
 }
 
 .intro__list {

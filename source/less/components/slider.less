@@ -19,3 +19,45 @@
     opacity: 1;
   }
 }
+
+.slider__review-toggle {
+  &:last-of-type {
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 2px solid @blue-basic;
+    border-radius: 1px;
+    border-left: none;
+    border-top: none;
+    opacity: 0.3;
+  }
+
+  &--left {
+    @media (min-width: @desktop-width) {
+      transform: rotate(135deg);
+      top: 213px;
+      left: 130px;
+    }
+  }
+
+  &--right {
+    @media (min-width: @desktop-width) {
+      transform: rotate(-45deg);
+      top: 213px;
+      right: 130px;
+    }
+  }
+}
+
+.slider__prices-toggle {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
