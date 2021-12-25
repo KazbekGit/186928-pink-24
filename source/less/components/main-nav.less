@@ -24,6 +24,7 @@
   font-weight: 700;
   line-height: 32px;
   text-transform: uppercase;
+  text-align: center;
 
   @media (min-width: @desktop-width) {
     display: flex;
@@ -48,6 +49,13 @@
     box-shadow: none;
     padding-top: 46px;
     padding-bottom: 44px;
+  }
+
+  &--current a {
+    @media (min-width: @desktop-width) {
+      padding-bottom: 11px;
+      border-bottom: 2px solid @white;
+    }
   }
 }
 

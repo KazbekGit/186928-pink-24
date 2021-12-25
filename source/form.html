@@ -9,46 +9,43 @@
 </head>
 <body class="page__body">
   <header class="page-header">
-    <div class="wrapper page-header__wrapper">
-      <a class="logo" href="index.html" aria-label="Логотип Пинк">
-        <img class="logo__img" src="img/pink.svg" alt="pink-logo" width="74" height="23">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-        <ul class="main-nav__list visually-hidden">
-          <li class="main-nav__item"><a class="main-nav__item-link" href="index.html" aria-label="Главная">Главная</a></li>
-          <li class="main-nav__item"><a class="main-nav__item-link" href="catalog.html" aria-label="Фотографии">Фотографии</a></li>
-          <li class="main-nav__item main-nav__item--current"><a class="main-nav__item-link" href="form.html" aria-label="Конкурс">Конкурс</a></li>
-          <li class="main-nav__item"><a class="main-nav__item-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a></li>
-          </ul>
-      </nav>
-    </div>
+    <a class="logo page-header__logo" href="index.html" aria-label="Логотип Пинк">
+      <img class="logo__img" src="img/pink.svg" alt="pink-logo" width="74" height="23">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a class="main-nav__item-link" href="index.html" aria-label="Главная">Главная</a></li>
+        <li class="main-nav__item"><a class="main-nav__item-link" href="catalog.html" aria-label="Фотографии">Фотографии</a></li>
+        <li class="main-nav__item main-nav__item--current"><a class="main-nav__item-link" href="form.html" aria-label="Конкурс">Конкурс</a></li>
+        <li class="main-nav__item"><a class="main-nav__item-link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">HTML Academy</a></li>
+      </ul>
+    </nav>
   </header>
   <main class="page-main">
     <h2 class="page-main__header page-main__header--paddings">
       Конкурс на самое безбашенное путешествие с Пинк
     </h2>
     <form class="main-form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="wrapper main-form__wrapper">
-        <p class="main-form__title">
+      <p class="main-form__title">
           Поделитесь своей историей и
           получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
-        </p>
-        <fieldset class="main-form__fieldset main-form__user-info">
-          <legend class="visually-hidden">ФИО пользователя</legend>
-          <label class="main-form__header" for="user-surname" aria-label="Фамилия">Фамилия</label>
-          <input class="main-form__input main-form__input-surname" type="text" id="user-surname" name="surname" placeholder="Укажите фамилию *" required>
-          <label class="main-form__header" for="user-name">Имя</label>
-          <input class="main-form__input main-form__input-name" type="text" id="user-name" aria-label="Имя" name="name" placeholder="Введите ваше имя *" required>
-          <label class="main-form__header" for="user-middlename">Отчество</label>
-          <input class="main-form__input main-form__input-middlename" type="text" id="user-middlename" aria-label="Отчество" name="middlename" placeholder="Ну и отчество тоже">
-        </fieldset>
-      </div>
+          <span class="main-form__title-last">Пожалуйста, заполните форму ниже:</span>
+      </p>
+      <fieldset class="main-form__fieldset main-form__user-info">
+        <legend class="visually-hidden main-form__legend">ФИО пользователя</legend>
+        <label class="main-form__header main-form__header--surname" for="user-surname" aria-label="Фамилия">Фамилия</label>
+        <input class="main-form__input main-form__input--surname" type="text" id="user-surname" name="surname" placeholder="Укажите фамилию *" required>
+        <label class="main-form__header main-form__header--name" for="user-name">Имя</label>
+        <input class="main-form__input main-form__input--name" type="text" id="user-name" aria-label="Имя" name="name" placeholder="Введите ваше имя *" required>
+        <label class="main-form__header" for="user-middlename">Отчество</label>
+        <input class="main-form__input main-form__input--middlename" type="text" id="user-middlename" aria-label="Отчество" name="middlename" placeholder="Ну и отчество тоже">
+      </fieldset>
       <fieldset class="main-form__fieldset main-form__user-achievements">
-        <legend class="main-form__header main-form__header--achievements">Ваши безбашенные достижения в путешествии</legend>
+        <legend class="main-form__header main-form__legend main-form__header--achievements">Ваши безбашенные достижения в путешествии</legend>
         <ul class="main-form__checkbox-list" role="none">
           <li class="main-form__checkbox-item">
-            <label class="main-form__abel" for="shark">Сделал селфи с акулой</label>
+            <label class="main-form__label" for="shark">Сделал селфи с акулой</label>
             <input class="main-form__checkbox" type="checkbox" checked name="selfi-with-shark" id="shark" aria-label="Сделал селфи с акулой">
           </li>
           <li class="main-form__checkbox-item">
@@ -73,52 +70,58 @@
           </li>
         </ul>
       </fieldset>
-      <div class="wrapper main-form__wrapper">
-        <fieldset class="main-form__fieldset main-form__tel-address">
-          <legend class="main-form__header visually-hidden">контактная информация</legend>
-          <h3 class="main-form__header"><label class="main-form__header-text for="tel">Номер телефона</label></h3>
+      <fieldset class="main-form__fieldset main-form__tel-address">
+        <legend class="main-form__header main-form__legend main-form__header--contacts">контактная информация</legend>
+        <div class="main-form__tel-block">
+          <h3 class="main-form__header"><label class="main-form__header-text" for="tel">Номер телефона</label></h3>
           <input class="main-form__input main-form__tel" type="tel" id="tel" name="tel" placeholder="Номер, пожалуйста" aria-label="Номер телефона">
+        </div>
+        <div class="main-form__tel-block">
           <h3 class="main-form__header main-form__header--small-margin"><label class="main-form__header-text" for="e-mail">Адрес почты</label></h3>
           <input class=" main-form__input main-form__checkbox" type="email" id="e-mail" name="e-mail" placeholder="Введите почту *" aria-label="Адрес почты" required>
-        </fieldset>
-      </div>
+        </div>
+      </fieldset>
       <fieldset class="main-form__fieldset main-form__application-type">
-        <legend class="main-form__header main-form__header--application-type">С каким приложением путешествовали?</legend>
+        <legend class="main-form__header main-form__legend main-form__header--application-type">С каким приложением путешествовали?</legend>
         <ul class="main-form__radio-list">
           <li class="main-form__radio-item">
-            <label class="main-form__label" for="app">Pink для iOS</label>
+            <label class="main-form__label" for="ios">Pink для iOS</label>
             <input class="main-form__radio" type="radio" name="application-type" id="ios" aria-label="Pink для iOS">
           </li>
-          <li class="main-form__radio-item>
-            <label class="main-form__label" for="app">Pink на Android</label>
+          <li class="main-form__radio-item">
+            <label class="main-form__label" for="android">Pink на Android</label>
             <input class="main-form__radio" type="radio" name="application-type" id="android" aria-label="Pink на Android">
           </li>
-          <li class="main-form__radio-item>
-            <label class="main-form__label" for="app">Windows Phone</label>
+          <li class="main-form__radio-item">
+            <label class="main-form__label" for="windows">Windows Phone</label>
             <input class="main-form__radio" type="radio" name="application-type" id="windows" aria-label="Windows Phone">
           </li>
         </ul>
       </fieldset>
-      <div class="wrapper main-form__wrapper">
-        <fieldset class="main-form__fieldset main-form__review">
-          <legend class="main-form__header main-form__review-header">
-            <label for="user-review">Опишите свои эмоции</label></legend>
-          <textarea class="main-form__text-area" name="review" id="user-review" cols="30" rows="10" aria-label="Опишите свои эмоции">Можно прям в красках, не стесняясь в выражениях</textarea>
-        </fieldset>
+      <fieldset class="main-form__fieldset main-form__review">
+        <legend class="main-form__header main-form__legend main-form__header--review">
+          <label for="user-review">Опишите свои эмоции</label></legend>
+        <textarea class="main-form__text-area" name="review" id="user-review" aria-label="Опишите свои эмоции">Можно прям в красках, не стесняясь в выражениях</textarea>
+      </fieldset>
+      <div class="main-form__button-block">
         <button class="button main-form__button main-form__button-submit" type="submit" aria-label="Отправить форму">Отправить форму</button>
         <p class="main-form__footnote"><span class="main-form__footnote-star">*</span> — обязательные поля</p>
       </div>
       <div class="popup popup--success visually-hidden">
-        <h3 class="popup__header">Ваша заявка отправлена</h3>
+        <h3 class="popup__header popup__header--success">Ваша заявка отправлена</h3>
         <p class="popup__text popup__text--success">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и оповестим вас.</p>
-        <button class="button main-form__button popup__button" type="button" aria-label="Закрыть окно">Закрыть окно</button>
+        <div class="popup__button-block">
+          <button class="button main-form__button popup__button" type="button" aria-label="Закрыть окно">Закрыть окно</button>
+        </div>
       </div>
       <div class="popup popup--failure visually-hidden">
         <h3 class="popup__header popup__header--failure">Что-то пошло не так!</h3>
         <p class="popup__text popup__text--failure">Проверьте поля, выделенные красным,
           скорее всего вы забыли их заполнить
         </p>
-        <button class="button main-form__button popup__button" type="button" aria-label="Ок">Ок</button>
+        <div class="popup__button-block popup__button-block--failure">
+          <button class="button main-form__button popup__button" type="button" aria-label="Ок">Ок</button>
+        </div>
       </div>
     </form>
   </main>
