@@ -9,7 +9,7 @@
   <body class="page__body">
       <header class="page-header">
         <a class="logo page-header__logo" href="index.html" aria-label="Логотип Пинк">
-          <img class="logo__img" src="img/pink.svg" alt="pink-logo" width="74" height="23">
+          <img class="logo__img" src="img/logo-white-mobile.png" alt="pink-logo" width="74" height="23">
         </a>
         <nav class="main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
@@ -26,25 +26,27 @@
         <section class="intro">
           <div class="wrapper intro__wrapper">
             <h1 class="intro__header">Взгляните на жизнь иначе!</h1>
-            <button class="button intro__button" type="button" aria-label="Скачать приложение">Скачать приложение</button>
-            <ul class="intro__list">
-              <li class="intro__item">
-                <a class="intro__link intro__link--apple" href="https://www.apple.com" aria-label="Apple">
-                  <img class="intro__img" src="img/apple-logo.svg" alt="apple-logo" width="47" height="56">
-                </a>
-              </li>
-              <li class="intro__item">
-                <a class="intro__link intro__link--android" href="https://www.android.com" aria-label="Android">
-                  <img class="intro__img" src="img/android-logo.svg" alt="android-logo" width="43" height="47">
-                </a>
-              </li>
-              <li class="intro__item">
-                <a class="intro__link intro__link--microsoft" href="https://www.microsoft.com" aria-label="Microsoft">
-                  <img class="intro__img" src="img/microsoft-logo.svg" alt="microsoft-logo" width="44" height="41">
-                </a>
-              </li>
-            </ul>
-            <p class="intro__download-info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            <div class="intro__app-block">
+              <button class="button intro__button" type="button" aria-label="Скачать приложение">Скачать приложение</button>
+              <ul class="intro__list">
+                <li class="intro__item">
+                  <a class="intro__link intro__link--apple" href="https://www.apple.com" aria-label="Apple">
+                    <img class="intro__img" src="img/apple-logo.svg" alt="apple-logo" width="47" height="56">
+                  </a>
+                </li>
+                <li class="intro__item">
+                  <a class="intro__link intro__link--android" href="https://www.android.com" aria-label="Android">
+                    <img class="intro__img" src="img/android-logo.svg" alt="android-logo" width="43" height="47">
+                  </a>
+                </li>
+                <li class="intro__item">
+                  <a class="intro__link intro__link--microsoft" href="https://www.microsoft.com" aria-label="Microsoft">
+                    <img class="intro__img" src="img/microsoft-logo.svg" alt="microsoft-logo" width="44" height="41">
+                  </a>
+                </li>
+              </ul>
+              <p class="intro__download-info">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+            </div>
           </div>
         </section>
         <section class="information">
@@ -60,7 +62,7 @@
               </li>
               <li class="information__term">
                 <h2 class="information__term-title">Меняет мир вокруг</h2>
-                <p class="information__term-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                <p class="information__term-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы <br class="page-body__br-tablet-none"> усилить эффект</p>
               </li>
               <li class="information__term">
                 <h2 class="information__term-title">Заводит новых друзей</h2>
@@ -69,10 +71,10 @@
             </ul>
           </div>
           <div class="information__diagram">
-            <h2  class="information__diagram-header">Эффект на 24 часа!</h2>
+            <h2  class="information__diagram-header">Эффект <br class="page-body__br-tablet-none">на 24 часа!</h2>
             <p class="information__diagram-text">Британские ученые провели исследования
               и доказали, что положительный эффект
-              от использования приложения длится целые сутки!
+              от использования приложения длится <br class="page-body__br-tablet-none">целые сутки!
             </p>
             <a class="information__diagram-link" href="#noscroll" aria-label="Узнать больше об исследовании">Узнать больше об исследовании</a>
           </div>
@@ -150,7 +152,8 @@
               </li>
             </ul>
           </div>
-            <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638044099803!5m2!1sru!2sru"  height="200" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+          <div class="contacts__triangle-on-map"></div>
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1638044099803!5m2!1sru!2sru"  height="200" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
       </main>
       <footer class="page-footer">

@@ -1,7 +1,12 @@
 .prices {
-  padding-top: 80px;
+  padding-top: 66px;
   padding-bottom: 50px;
   background-color: @grey;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .prices__wrapper {
@@ -35,6 +40,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-top: 40px;
     position: static;
   }
 
@@ -63,6 +69,8 @@
 }
 
 .prices__header {
+  margin: 0;
+  padding: 0;
   width: 276px;
   height: 94px;
   font-size: 16px;
@@ -74,9 +82,12 @@
   background-color: @blue-basic;
   color: @white;
   border-right: 2px solid @grey-light;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    width: 175px;
+    width: 152px;
+    height: 75px;
+    padding-top: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -89,6 +100,10 @@
 
   &:nth-child(2) {
     line-height: 6px;
+
+    @media (min-width: @tablet-width) {
+      line-height: 30px;
+    }
   }
 
   &:last-child {
@@ -98,11 +113,6 @@
   &--hit {
     position: relative;
     overflow: hidden;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    text-align: center;
 
     &::after {
       position: absolute;
@@ -114,9 +124,19 @@
       width: 100px;
       height: 20px;
       transform: rotate(-45deg);
-      top: 15px;
+      top: 20px;
       left: -25px;
       background-color: @pink;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 30px;
+      text-align: center;
+
+      @media (min-width: @tablet-width) {
+        top: 8px;
+        left: -30px;
+      }
     }
   }
 }
@@ -128,7 +148,7 @@
 .prices__column {
   position: relative;
   box-sizing: border-box;
-  height: 59px;
+  height: 62px;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -138,6 +158,13 @@
   padding-left: 20px;
   text-transform: uppercase;
   background-color: @white;
+
+  @media (min-width: @tablet-width) {
+    text-transform: none;
+    height: 47px;
+    width: 153px;
+    padding-left: 15px;
+  }
 
   &--checked::after {
     position: absolute;
@@ -192,14 +219,23 @@
   font-weight: 300;
   line-height: 30px;
   text-align: center;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 4px;
+  }
 }
 
 .prices__toggles {
-  width: 56px;
-  margin: 0 auto;
+  margin: -2px auto;
+  text-align: center;
   padding: 0;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

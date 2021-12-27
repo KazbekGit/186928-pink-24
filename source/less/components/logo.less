@@ -2,11 +2,15 @@
   font-size: 0;
   margin: 0;
   padding: 0;
-  width: 74px;
-  height: 23px;
 }
 
-.log__img {
-  width: 74px;
-  height: 23px;
+.logo__img {
+  content: url("../img/logo-white-mobile.png");
+
+  @media (min-width: @tablet-width) {
+    content: url("../img/logo-white-tablet.png");
+    width: 145px;
+    height: 40px;
+  }
 }
+
