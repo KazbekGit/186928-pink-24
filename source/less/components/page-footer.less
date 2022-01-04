@@ -3,7 +3,7 @@
   padding-bottom: 40px;
 
   @media (min-width: @desktop-width) {
-    padding-top: 74px;
+    padding-top: 64px;
     padding-bottom: 74px;
   }
 }
@@ -31,6 +31,7 @@
 }
 
 .page-footer__logo {
+  display: block;
   margin-bottom: 39px;
   content: url("../img/logotype-blue-tablet.svg");
 
@@ -38,6 +39,12 @@
     padding: 0;
     margin: 0;
     align-self: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 147px;
+    height: 40px;
+    content: url("../img/logotype-blue-desktop.png");
   }
 }
 
@@ -50,6 +57,10 @@
   @media (min-width: @tablet-width) {
     padding: 0;
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: -3px;
   }
 }
 

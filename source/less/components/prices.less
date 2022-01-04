@@ -24,8 +24,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 20px;
     padding-left: 130px;
     padding-right: 130px;
+    padding-bottom: 86px;
   }
 }
 
@@ -92,6 +94,9 @@
 
   @media (min-width: @desktop-width) {
     width: 234px;
+    height: 94px;
+    font-size: 18px;
+    padding-top: 0;
   }
 
   &:first-child {
@@ -137,6 +142,12 @@
         top: 8px;
         left: -30px;
       }
+
+      @media (min-width: @tablet-width) {
+        width: 120px;
+        top: 18px;
+        left: -33px;
+      }
     }
   }
 }
@@ -164,6 +175,14 @@
     height: 47px;
     width: 153px;
     padding-left: 15px;
+  }
+
+  @media (min-width: @tablet-width) {
+    text-transform: none;
+    height: 59px;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-top: 5px;
   }
 
   &--checked::after {
@@ -223,6 +242,10 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
   }
 }
 
