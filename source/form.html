@@ -35,51 +35,51 @@
       </p>
       <fieldset class="main-form__fieldset main-form__user-info">
         <legend class="visually-hidden main-form__legend">ФИО пользователя</legend>
-        <label class="main-form__header main-form__header--surname" for="user-surname" aria-label="Фамилия">Фамилия</label>
+        <label class="main-form__header main-form__header--surname main-form__header-user-info" for="user-surname" aria-label="Фамилия">Фамилия:</label>
         <input class="main-form__input main-form__input--surname" type="text" id="user-surname" name="surname" placeholder="Укажите фамилию *" required>
-        <label class="main-form__header main-form__header--name" for="user-name">Имя</label>
+        <label class="main-form__header main-form__header--name main-form__header-user-info" for="user-name">Имя:</label>
         <input class="main-form__input main-form__input--name" type="text" id="user-name" aria-label="Имя" name="name" placeholder="Введите ваше имя *" required>
-        <label class="main-form__header" for="user-middlename">Отчество</label>
+        <label class="main-form__header main-form__header-user-info" for="user-middlename">Отчество:</label>
         <input class="main-form__input main-form__input--middlename" type="text" id="user-middlename" aria-label="Отчество" name="middlename" placeholder="Ну и отчество тоже">
       </fieldset>
       <fieldset class="main-form__fieldset main-form__user-achievements">
-        <legend class="main-form__header main-form__legend main-form__header--achievements">Ваши безбашенные достижения в путешествии</legend>
+        <legend class="main-form__header main-form__legend main-form__header--achievements">Ваши безбашенные <br class="page-body__br-mobile-only">достижения в путешествии</legend>
         <ul class="main-form__checkbox-list" role="none">
           <li class="main-form__checkbox-item">
-            <label class="main-form__label" for="shark">Сделал селфи с акулой</label>
             <input class="main-form__checkbox" type="checkbox" checked name="selfi-with-shark" id="shark" aria-label="Сделал селфи с акулой">
+            <label class="main-form__label" for="shark" tabindex="1">Сделал селфи с акулой</label>
           </li>
           <li class="main-form__checkbox-item">
-            <label class="main-form__label" for="beach">Обгорел на пляже</label>
             <input class="main-form__checkbox" type="checkbox" checked name="burned-on-the-beach" id="beach" aria-label="Обгорел на пляже">
+            <label class="main-form__label" for="beach" tabindex="1">Обгорел на пляже</label>
           </li>
           <li class="main-form__checkbox-item">
-            <label class="main-form__label" for="chuck">Видел Чака Норриса</label>
             <input class="main-form__checkbox" type="checkbox" name="see-chuck-norris" id="chuck" aria-label="Видел Чака Норриса">
+            <label class="main-form__label" for="chuck" tabindex="1">Видел Чака Норриса</label>
           </li>
           <li class="main-form__checkbox-item">
-            <label class="main-form__label" for="souvenir">Накупил сувениров</label>
             <input class="main-form__checkbox" type="checkbox" name="buy-souvenirs" id="souvenir" aria-label="Накупил сувениров">
+            <label class="main-form__label" for="souvenir" tabindex="1">Накупил сувениров</label>
           </li>
           <li class="main-form__checkbox-item">
-            <label class="main-form__label" for="tower">Удержал башню</label>
             <input class="main-form__checkbox" type="checkbox" checked name="held-the-tower" id="tower" aria-label="Удержал башню">
+            <label class="main-form__label" for="tower" tabindex="1">Удержал башню</label>
           </li>
           <li class="main-form__checkbox-item">
-            <label class="main-form__label" for="hotel">Разгромил отель</label>
             <input class="main-form__checkbox" type="checkbox" name="crush-the-hotel" id="hotel" aria-label="Разгромил отель">
+            <label class="main-form__label" for="hotel" tabindex="1">Разгромил отель</label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="main-form__fieldset main-form__tel-address">
         <legend class="main-form__header main-form__legend main-form__header--contacts">контактная информация</legend>
         <div class="main-form__tel-block">
-          <h3 class="main-form__header"><label class="main-form__header-text" for="tel">Номер телефона</label></h3>
+          <h3 class="main-form__header main-form__header-tel"><label class="main-form__header-text" for="tel">Номер телефона</label></h3>
           <input class="main-form__input main-form__tel" type="tel" id="tel" name="tel" placeholder="Номер, пожалуйста" aria-label="Номер телефона">
         </div>
         <div class="main-form__tel-block">
-          <h3 class="main-form__header main-form__header--small-margin"><label class="main-form__header-text" for="e-mail">Адрес почты</label></h3>
-          <input class=" main-form__input main-form__checkbox" type="email" id="e-mail" name="e-mail" placeholder="Введите почту *" aria-label="Адрес почты" required>
+          <h3 class="main-form__header main-form__header-e-mail main-form__header--small-margin"><label class="main-form__header-text" for="e-mail">Адрес почты</label></h3>
+          <input class="main-form__input" type="email" id="e-mail" name="e-mail" placeholder="Введите почту *" aria-label="Адрес почты" required>
         </div>
       </fieldset>
       <fieldset class="main-form__fieldset main-form__application-type">
