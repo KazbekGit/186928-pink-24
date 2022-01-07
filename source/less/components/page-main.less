@@ -19,11 +19,14 @@
   line-height: 33px;
   text-align: center;
   color: @white;
-  background-image: url("../img/back-mobile-form.jpg");
   box-sizing: border-box;
+  background-image: url("../img/back-mobile-form.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media (min-width: @tablet-width) {
     padding-top: calc(110px + 36px);
+    background-image: url("../img/back-tablet-form.jpg");
   }
 
   &--paddings {
