@@ -8,16 +8,14 @@
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 20px;
-  padding-bottom: 41px;
   display: grid;
-  row-gap: 40px;
-  column-gap: 48px;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: min-content 1fr;
     grid-template-rows: min-content min-content;
     padding-left: 20px;
     padding-right: 20px;
+    column-gap: 48px;
   }
 
   @media (min-width: @desktop-width) {
@@ -47,6 +45,8 @@
 }
 
 .upload__img-wrapper {
+  margin-bottom: 40px;
+
   @media (min-width: @tablet-width) {
     grid-row-start: 1;
     grid-row-end: -1;
@@ -58,36 +58,86 @@
 }
 
 .upload__settings {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  column-gap: 35px;
-  row-gap: 40px;
-  border-bottom: 1px solid @blue-basic-transparent;
-  padding-bottom: 34px;
-  padding-right: 15px;
+  row-gap: 25px;
+  padding-bottom: 29px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: @grey;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 20px;
+    border-top: 1px solid @blue-basic-transparent;
+    bottom: -20px;
+    left: 0;
+    z-index: 9;
+  }
 }
 
-.upload__slider-container {
-  flex-grow: 2;
-}
-
-.upload__block {
+.upload__icon {
   margin-right: 35px;
+
+  &:first-of-type {
+    margin-left: 15px;
+  }
 
   &:last-of-type {
     margin-right: 0;
   }
 }
 
+.upload__slider-container {
+  width: 100%;
+}
+
+.upload__slider-container:not(:first-of-type) {
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
+}
+
+.upload__slider {
+  appearance: none;
+  height: 2px;
+  background-color: @blue-basic;
+  width: 100%;
+}
+
+.upload__slider:focus {
+  outline: none;
+}
+
+.upload__slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid @pink;
+  background-color: @white;
+  cursor: pointer;
+}
+
+.upload__slider:focus::-webkit-slider-thumb {
+  background-color: @pink;
+}
+
 .upload__buttons-block {
   display: flex;
   flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     grid-column-start: 2;
     grid-column-end: 3;
+    border: none;
   }
 
   @media (min-width: @desktop-width) {
