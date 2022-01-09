@@ -5,6 +5,8 @@
 
 .upload__wrapper {
   background-color: @grey;
+  padding-left: 20px;
+  padding-right: 20px;
   padding-top: 20px;
   padding-bottom: 41px;
   display: grid;
@@ -28,8 +30,8 @@
 .upload__header {
   padding: 0;
   margin: 0;
-  padding-top: 49px;
-  padding-bottom: 52px;
+  padding-top: 42px;
+  padding-bottom: 43px;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -57,10 +59,18 @@
 
 .upload__settings {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  column-gap: 35px;
+  row-gap: 40px;
   border-bottom: 1px solid @blue-basic-transparent;
   padding-bottom: 34px;
+  padding-right: 15px;
+}
+
+.upload__slider-container {
+  flex-grow: 2;
 }
 
 .upload__block {

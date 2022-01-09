@@ -29,6 +29,11 @@
     background-image: url("../img/back-tablet-form.jpg");
   }
 
+  @media (min-width: @desktop-width) {
+    padding-top: calc(110px + 36px);
+    background-image: url("../img/back-desktop-form.jpg");
+  }
+
   &--paddings {
     box-sizing: border-box;
     padding-top: calc(69px + 27px);
@@ -50,12 +55,13 @@
     @media (min-width: @desktop-width) {
       font-size: 50px;
       line-height: 68px;
-      padding-top: calc(110px + 70px);
-      padding-bottom: 60px;
+      padding-top: calc(110px + 60px);
+      padding-bottom: 87px;
     }
   }
 
   &--photos {
+    padding-top: 94px;
     padding-bottom: 77px;
     padding-left: 74px;
     padding-right: 74px;
@@ -83,8 +89,8 @@
 .page-main__definition {
   padding: 0;
   margin: 0;
-  padding-top: 54px;
-  padding-bottom: 60px;
+  padding-top: 45px;
+  padding-bottom: 50px;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;

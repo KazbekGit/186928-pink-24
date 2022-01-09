@@ -30,7 +30,7 @@
     <form class="main-form" action="https://echo.htmlacademy.ru" method="post">
       <p class="main-form__title">
           Поделитесь своей историей и
-          получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+          получите шанс выиграть ценный приз — 1000 миль на <br class="page-body__br-desktop-only"> вашу бонусную карту!
           <span class="main-form__title-last">Пожалуйста, заполните форму ниже:</span>
       </p>
       <fieldset class="main-form__fieldset main-form__user-info">
@@ -45,27 +45,27 @@
       <fieldset class="main-form__fieldset main-form__user-achievements">
         <legend class="main-form__header main-form__legend main-form__header--achievements">Ваши безбашенные <br class="page-body__br-mobile-only">достижения в путешествии</legend>
         <ul class="main-form__checkbox-list" role="none">
-          <li class="main-form__checkbox-item">
+          <li class="main-form__checkbox-item main-form__checkbox-item--selfi-with-shark">
             <input class="main-form__checkbox" type="checkbox" checked name="selfi-with-shark" id="shark" aria-label="Сделал селфи с акулой">
             <label class="main-form__label" for="shark" tabindex="1">Сделал селфи с акулой</label>
           </li>
-          <li class="main-form__checkbox-item">
+          <li class="main-form__checkbox-item main-form__checkbox-item--burned-on-the-beach">
             <input class="main-form__checkbox" type="checkbox" checked name="burned-on-the-beach" id="beach" aria-label="Обгорел на пляже">
             <label class="main-form__label" for="beach" tabindex="1">Обгорел на пляже</label>
           </li>
-          <li class="main-form__checkbox-item">
+          <li class="main-form__checkbox-item main-form__checkbox-item--see-chuck-norris">
             <input class="main-form__checkbox" type="checkbox" name="see-chuck-norris" id="chuck" aria-label="Видел Чака Норриса">
             <label class="main-form__label" for="chuck" tabindex="1">Видел Чака Норриса</label>
           </li>
-          <li class="main-form__checkbox-item">
+          <li class="main-form__checkbox-item main-form__checkbox-item--buy-souvenirs">
             <input class="main-form__checkbox" type="checkbox" name="buy-souvenirs" id="souvenir" aria-label="Накупил сувениров">
             <label class="main-form__label" for="souvenir" tabindex="1">Накупил сувениров</label>
           </li>
-          <li class="main-form__checkbox-item">
+          <li class="main-form__checkbox-item main-form__checkbox-item--held-the-tower">
             <input class="main-form__checkbox" type="checkbox" checked name="held-the-tower" id="tower" aria-label="Удержал башню">
             <label class="main-form__label" for="tower" tabindex="1">Удержал башню</label>
           </li>
-          <li class="main-form__checkbox-item">
+          <li class="main-form__checkbox-item main-form__checkbox-item--crush-the-hotel">
             <input class="main-form__checkbox" type="checkbox" name="crush-the-hotel" id="hotel" aria-label="Разгромил отель">
             <label class="main-form__label" for="hotel" tabindex="1">Разгромил отель</label>
           </li>
@@ -83,7 +83,7 @@
         </div>
       </fieldset>
       <fieldset class="main-form__fieldset main-form__application-type">
-        <legend class="main-form__header main-form__legend main-form__header--application-type">С каким приложением путешествовали?</legend>
+        <legend class="main-form__header main-form__legend main-form__header--application-type main-form__header--app-advanced">С каким приложением путешествовали?</legend>
         <ul class="main-form__radio-list">
           <li class="main-form__radio-item">
             <input class="main-form__radio visually-hidden" type="radio" name="application-type" id="ios" aria-label="Pink для iOS" checked>
@@ -106,7 +106,7 @@
       </fieldset>
       <div class="main-form__button-block">
         <button class="button main-form__button main-form__button-submit" type="submit" aria-label="Отправить форму">Отправить форму</button>
-        <p class="main-form__footnote"><span class="main-form__footnote-star">*</span> — обязательные поля</p>
+        <p class="main-form__footnote"><span class="main-form__footnote-star">*</span> — обязательные <span class="only-in-desktop">для заполнения</span>поля</p>
       </div>
       <div class="popup popup--success visually-hidden">
         <h3 class="popup__header popup__header--success">Ваша заявка отправлена</h3>

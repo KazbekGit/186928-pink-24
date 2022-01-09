@@ -21,6 +21,7 @@ textarea {
 
 .page-body__br-mobile-only {
   display: none;
+
   @media (max-width: @mobile-width-only) {
     display: inline;
   }
@@ -35,6 +36,14 @@ textarea {
 }
 
 .page-body__br-desktop-only {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
+
+.only-in-desktop {
   display: none;
 
   @media (min-width: @desktop-width) {

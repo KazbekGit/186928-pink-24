@@ -16,6 +16,7 @@
     flex-direction: row;
     padding-left: 130px;
     padding-right: 130px;
+    padding-bottom: 10px;
   }
 }
 
@@ -36,6 +37,12 @@
     padding-left: 65px;
     padding-right: 65px;
     margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 92px;
+    padding-right: 85px;
+    margin-bottom: 88px;
   }
 }
 
@@ -101,6 +108,10 @@
     @media (min-width: @tablet-width) {
       margin-left: 67px;
     }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 0;
+    }
   }
 
   &--contacts {
@@ -161,6 +172,13 @@
   }
 }
 
+.main-form__header--app-advanced {
+  @media (min-width: @desktop-width) {
+    padding-left: 4px;
+    padding-right: 10px;
+  }
+}
+
 .main-form__user-info {
   padding-bottom: 45px;
   box-sizing: border-box;
@@ -183,7 +201,7 @@
 
   @media (min-width: @desktop-width) {
     width: auto;
-    flex-grow: 1;
+    min-width: 433px;
   }
 }
 
@@ -223,6 +241,12 @@
     padding-top: 29px;
     padding-bottom: 54px;
   }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 6px;
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .main-form__label {
@@ -244,13 +268,16 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
-    padding-left: 95px;
+    padding-left: 117px;
+    padding-bottom: 48px;
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+    padding-left: 115px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 58px;
+    column-gap: 90px;
   }
 }
 
@@ -258,8 +285,44 @@
   position: relative;
   margin-bottom: 52px;
 
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
+
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &--see-chuck-norris {
+    @media (min-width: @desktop-width) {
+      order: 2;
+      margin-left: 12px;
+    }
+  }
+
+  &--held-the-tower {
+    @media (min-width: @desktop-width) {
+      order: 3;
+    }
+  }
+
+  &--burned-on-the-beach {
+    @media (min-width: @desktop-width) {
+      order: 4;
+    }
+  }
+
+  &--buy-souvenirs {
+    @media (min-width: @desktop-width) {
+      order: 5;
+      margin-left: 12px;
+    }
+  }
+
+  &--crush-the-hotel {
+    @media (min-width: @desktop-width) {
+      order: 5;
+    }
   }
 }
 
@@ -374,6 +437,10 @@
     margin-left: 20px;
     margin-bottom: 31px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .main-form__header-e-mail {
@@ -415,6 +482,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 74px;
+    margin-top: -7px;
+    padding-bottom: 10px;
   }
 }
 
@@ -425,6 +494,7 @@
   padding-left: 22px;
   padding-right: 22px;
   background-color: @grey;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     order: 3;
@@ -436,8 +506,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: auto;
-    flex-grow: 1;
+    width: 432px;
+    box-sizing: border-box;
+    padding-bottom: 0;
+    margin-left: 72px;
+    margin-top: -17px;
   }
 }
 
@@ -451,6 +524,10 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
   }
 }
 
@@ -522,6 +599,10 @@
     margin-top: 0;
     margin-bottom: 66px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 42px;
+  }
 }
 
 .main-form__review-header {
@@ -553,7 +634,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-height: 124px;
+    min-height: 125px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
