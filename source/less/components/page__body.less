@@ -12,6 +12,21 @@
   font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
 }
 
+.page__body input[type="tel"],
+.page__body input[type="text"],
+.page__body input[type="email"],
+textarea {
+  font-family: "Open Sans", "Arial", "Helvetica", sans-serif;
+}
+
+.page-body__br-mobile-only {
+  display: none;
+
+  @media (max-width: @mobile-width-only) {
+    display: inline;
+  }
+}
+
 .page-body__br-tablet-only {
   display: none;
 
@@ -21,6 +36,14 @@
 }
 
 .page-body__br-desktop-only {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
+
+.only-in-desktop {
   display: none;
 
   @media (min-width: @desktop-width) {
