@@ -1,10 +1,16 @@
 .page-footer {
-  padding-top: 40px;
+  padding-top: 30px;
   padding-bottom: 40px;
 
   @media (min-width: @desktop-width) {
-    padding-top: 74px;
+    padding-top: 64px;
     padding-bottom: 74px;
+  }
+
+  &--pt-catalog {
+    @media (min-width: @mobile-width) {
+      padding-top: 40px;
+    }
   }
 }
 
@@ -31,12 +37,20 @@
 }
 
 .page-footer__logo {
-  margin-bottom: 41px;
+  display: block;
+  margin-bottom: 39px;
+  content: url("../img/logotype-blue-tablet.svg");
 
   @media (min-width: @tablet-width) {
     padding: 0;
     margin: 0;
     align-self: flex-start;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 147px;
+    height: 40px;
+    content: url("../img/logotype-blue-desktop.png");
   }
 }
 
@@ -44,11 +58,15 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 41px;
+  margin-top: 38px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
     margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: -3px;
   }
 }
 
@@ -58,8 +76,9 @@
   font-weight: 400;
   line-height: 18px;
   margin: 0;
-  margin-right: 14px;
   padding: 0;
+  margin-left: -4px;
+  margin-right: 18px;
 
   @media (min-width: @desktop-width) {
     font-size: 18px;
