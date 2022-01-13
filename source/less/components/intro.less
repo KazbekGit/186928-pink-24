@@ -8,12 +8,20 @@
   background-position: 0 176px, 0 0;
   background-size: 100%, 100%;
 
+  @media (max-width: @mobile-width-only) and (min-resolution: 2dppx) {
+    background-image: url("../img/phone-mobile@2x.png"), url("../img/back-mobile@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 729px;
     background-image: url("../img/phone-tablet-width.png"), url("../img/back-tablet-width.jpg");
     background-repeat: no-repeat;
     background-position: 0 187px, 0 0;
     background-size: 100% auto, 100% auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/phone-tablet@2x.png"), url("../img/back-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -22,6 +30,10 @@
     background-repeat: no-repeat;
     background-position: 147px bottom, 0 0;
     background-size: 1050px, 1200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/phone-desktop@2x.png"), url("../img/back-desktop@2x.jpg");
+    }
   }
 }
 
