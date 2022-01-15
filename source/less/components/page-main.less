@@ -24,14 +24,26 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media (min-resolution: 1.5dppx) {
+    background-image: url("../img/back-mobile-form@2x.jpg");
+  }
+
   @media (min-width: @tablet-width) {
     padding-top: calc(110px + 36px);
     background-image: url("../img/back-tablet-form.jpg");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/back-tablet-form@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-top: calc(110px + 36px);
     background-image: url("../img/back-desktop-form.jpg");
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/back-desktop-form@2x.jpg");
+    }
   }
 
   &--paddings {
