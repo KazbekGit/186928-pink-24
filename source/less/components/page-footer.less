@@ -39,7 +39,6 @@
 .page-footer__logo {
   display: block;
   margin-bottom: 39px;
-  content: url("../img/logotype-blue-tablet.svg");
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -50,8 +49,41 @@
   @media (min-width: @desktop-width) {
     width: 147px;
     height: 40px;
-    content: url("../img/logotype-blue-desktop.png");
   }
+}
+
+.page-footer__logo--visible-phone-tablet {
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.page-footer__logo--visible-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.page-footer__logo-icon-words {
+  fill: @blue-basic;
+}
+
+.page-footer__logo-icon-glasses {
+  fill: @pink;
+}
+
+.page-footer__logo-icon:hover .page-footer__logo-icon-words {
+  fill: @pink;
+}
+
+.page-footer__logo-icon:active .page-footer__logo-icon-words {
+  fill: fade(@blue-basic, 30%);
+}
+
+.page-footer__logo-icon:active .page-footer__logo-icon-glasses {
+  fill: fade(@pink, 30%);
 }
 
 .page-footer__developer {

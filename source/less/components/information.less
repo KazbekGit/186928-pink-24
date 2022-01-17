@@ -22,6 +22,11 @@
       background-image: url("../img/first-phone-bg-desktop.png"), url("../img/second-phone-bg-desktop.png"), url("../img/third-phone-bg-desktop.png");
       background-position: 125px bottom, 445px bottom, 765px bottom;
       background-repeat: no-repeat;
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/first-phone-bg-desktop@2x.png"), url("../img/second-phone-bg-desktop@2x.png"), url("../img/third-phone-bg-desktop@2x.png");
+        background-size: 287px auto, 308px auto, 308px auto;
+      }
     }
   }
 }
@@ -42,18 +47,28 @@
     content: "";
     left: calc(50% - 78px);
     bottom: 0;
-    width: 157px;
+    min-width: 157px;
     min-height: 279px;
     background-image: url("../img/phone-bg-mobile.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 1.5dppx) {
+      background-image: url("../img/phone-bg-mobile@2x.png");
+      background-position: 50% bottom;
+      background-size: 187px;
+    }
 
     @media (min-width: @tablet-width) {
       left: 20px;
       bottom: 0;
       width: 268px;
       height: 483px;
-      clip: rect(0 268px 483px 0);
       background-image: url("../img/phone-bg-tablet.png");
+
+      @media (min-resolution: 1.5dppx) {
+        background-image: url("../img/phone-bg-tablet@2x.png");
+        background-size: 267px;
+      }
     }
 
     @media (min-width: @desktop-width) {
