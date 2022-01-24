@@ -143,6 +143,7 @@
   width: 100%;
   box-sizing: border-box;
   border: 2px solid @grey-light;
+  border-radius: 2px;
   padding-left: 20px;
   font-size: 18px;
   font-style: normal;
@@ -150,6 +151,15 @@
   line-height: 30px;
   text-align: left;
   color: @blue-basic;
+
+  &:hover {
+    border-color: @blue-basic;
+  }
+
+  &:active {
+    outline: none;
+    border-color: @pink;
+  }
 
   &::placeholder {
     font-size: 18px;
@@ -223,6 +233,13 @@
 
 .main-form__input--name {
   margin-bottom: 18px;
+  width: auto;
+}
+
+.main-form__user-info .main-form__input--name {
+  @media (min-width: @tablet-width) {
+    margin-left: -40px;
+  }
 }
 
 .main-form__user-achievements {
@@ -361,6 +378,19 @@
     width: 21px;
     height: 9px;
     transform: rotate(-45deg);
+  }
+}
+
+.main-form__checkbox + .main-form__label:hover {
+  &::after {
+    border-color: @blue-basic;
+  }
+}
+
+.main-form__checkbox + .main-form__label:active {
+  &::after {
+    outline: none;
+    border-color: @pink;
   }
 }
 
@@ -551,6 +581,18 @@
   }
 }
 
+.main-form__radio + .main-form__label--radio:hover {
+  &::after {
+    border-color: @blue-basic;
+  }
+}
+
+.main-form__radio + .main-form__label--radio:active {
+  &::after {
+    border-color: @pink;
+  }
+}
+
 .main-form__radio:checked + .main-form__label--radio {
   &::before {
     width: 15px;
@@ -674,6 +716,19 @@
 .main-form__button-submit {
   margin-bottom: 36px;
   min-height: 61px;
+
+  &:hover {
+    background-color: @green-dark;
+  }
+
+  &:active {
+    background-color: @green-dark;
+    color: fade(@white, 30%);
+  }
+
+  &:disabled {
+    background-color: @grey-light;
+  }
 
   @media (min-width: @tablet-width) {
     width: 298px;

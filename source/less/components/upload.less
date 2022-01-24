@@ -148,6 +148,28 @@
 }
 
 .upload__icon {
+  color: fade(@blue-basic, 30%);
+
+  &:hover {
+    color: fade(@blue-basic, 50%);
+  }
+
+  &:active {
+    color: @pink;
+  }
+
+  &--current {
+    color: @pink;
+
+    &:hover {
+      color: @pink;
+    }
+
+    &:active {
+      color: @pink;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     width: 22px;
     height: 22px;
@@ -278,11 +300,33 @@
   &--active {
     border: 2px solid @pink;
     color: @pink;
+
+    &:hover {
+      background-color: @pink;
+      color: @white;
+    }
+
+    &:active {
+      background-color: @pink;
+      color: fade(@white, 30%);
+    }
   }
 
   &--disabled {
     color: @blue-basic-transparent;
     border: 2px solid @blue-basic-transparent;
+
+    &:hover {
+      border-color: fade(@blue-basic, 30%);
+      color: fade(@blue-basic, 30%);
+    }
+
+    &:active {
+      color: fade(@white, 30%);
+      border-color: fade(@blue-basic, 30%);
+      background-color: fade(@blue-basic, 30%);
+      outline: none;
+    }
   }
 
   &:first-of-type {

@@ -25,6 +25,15 @@
   border-radius: 50%;
   box-sizing: border-box;
 
+  &:hover {
+    border: 3px solid @blue-basic;
+  }
+
+  &:active {
+    border: 3px solid;
+    border-color: fade(@blue-basic, 10%);
+  }
+
   &:last-of-type {
     margin-right: 0;
   }
