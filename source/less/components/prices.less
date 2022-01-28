@@ -37,7 +37,7 @@
   border-collapse: collapse;
   box-sizing: border-box;
 
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: @mobile-width-only) {
     min-width: 835px;
   }
 
@@ -52,7 +52,7 @@
 }
 
 .prices__row > .prices__header:first-child {
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: @mobile-width-only) {
     display: none;
   }
 }
@@ -65,7 +65,7 @@
 }
 
 .prices__row > :first-child {
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: @mobile-width-only) {
     display: none;
   }
 }
