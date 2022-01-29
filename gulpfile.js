@@ -12,6 +12,8 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
+import cheerio from 'gulp-cheerio';
+import replace from 'gulp-replace';
 
 // Styles
 
@@ -72,6 +74,12 @@ const sprites = () => {
     .pipe(svgstore({
       inlineSvg: true
     }))
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill')},
+      parserOptions: {xmlMode: true}
+    }))
+    .pipe(replace('&gt;', '>'))
     .pipe(rename('sprites.svg'))
     .pipe(gulp.dest('build/img'));
 }
