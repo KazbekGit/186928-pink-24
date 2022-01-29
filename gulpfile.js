@@ -64,7 +64,7 @@ const createWebp = () => {
 }
 
 const svg = () =>
-  gulp.src(['source/img/*.svg', '!source/img/sprites/*.svg'])
+  gulp.src(['source/img/*.svg', '!source/img/sprites/*.svg', '!source/img/sprites.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
@@ -74,13 +74,7 @@ const sprites = () => {
     .pipe(svgstore({
       inlineSvg: true
     }))
-    .pipe(cheerio({
-      run: function ($) {
-        $('[fill]').removeAttr('fill')},
-      parserOptions: {xmlMode: true}
-    }))
-    .pipe(replace('&gt;', '>'))
-    .pipe(rename('sprites.svg'))
+    .pipe(rename('sprites-auto.svg'))
     .pipe(gulp.dest('build/img'));
 }
 
@@ -88,6 +82,7 @@ const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
     'source/*.ico',
+    'source/img/sprites.svg'
   ], {
     base: 'source'
   })
