@@ -4,10 +4,17 @@
   margin-right: 15px;
   width: 6px;
   height: 6px;
-  background-color: @blue-basic;
-  opacity: 0.3;
+  background-color: fade(@blue-basic, 30%);
   border-radius: 50%;
   box-sizing: content-box;
+
+  &:hover {
+    background-color: fade(@blue-basic, 60%);
+  }
+
+  &:active {
+    background-color: fade(@blue-basic, 10%);
+  }
 
   &:last-of-type {
     margin-right: 0;
@@ -16,7 +23,14 @@
   &--current {
     background-color: @white;
     border: 3px solid @blue-basic;
-    opacity: 1;
+
+    &:hover {
+      background-color: @white;
+    }
+
+    &:active {
+      background-color: @white;
+    }
   }
 }
 
@@ -36,6 +50,7 @@
     border-radius: 1px;
     border-left: none;
     border-top: none;
+    cursor: pointer;
     opacity: 0.3;
   }
 
@@ -44,6 +59,16 @@
       transform: rotate(133deg);
       top: 220px;
       left: 136px;
+
+      &:hover {
+        opacity: 1;
+        background-color: transparent;
+      }
+
+      &:active {
+        opacity: 0.1;
+        background-color: transparent;
+      }
     }
   }
 
@@ -52,6 +77,16 @@
       transform: rotate(-43deg);
       top: 220px;
       right: 122px;
+
+      &:hover {
+        opacity: 1;
+        background-color: transparent;
+      }
+
+      &:active {
+        opacity: 0.1;
+        background-color: transparent;
+      }
     }
   }
 }

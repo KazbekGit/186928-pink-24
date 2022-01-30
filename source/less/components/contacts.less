@@ -164,6 +164,16 @@
 
 .contacts__e-mail {
   display: block;
+
+  &:hover {
+    color: @blue-basic;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: fade(@blue-basic, 30%);
+    text-decoration: underline;
+  }
 }
 
 .contacts__map {

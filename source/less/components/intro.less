@@ -109,6 +109,16 @@
   color: @white;
   box-sizing: border-box;
 
+  &:hover {
+    color: @pink;
+    background-color: @white;
+  }
+
+  &:active {
+    color: fade(@pink, 30%);
+    background-color: @white;
+  }
+
   @media (min-width: @tablet-width) {
     padding: 0;
     max-width: 300px;
