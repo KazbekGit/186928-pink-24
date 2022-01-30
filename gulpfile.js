@@ -12,8 +12,6 @@ import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
 import svgstore from 'gulp-svgstore';
 import del from 'del';
-import cheerio from 'gulp-cheerio';
-import replace from 'gulp-replace';
 
 // Styles
 
