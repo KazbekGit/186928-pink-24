@@ -4,6 +4,9 @@
   box-sizing: border-box;
   background-color: @white;
   bottom: 12px;
+  left: 0;
+  right: 0;
+  margin: auto;
 
   @media (min-width: @tablet-width) {
     margin-left: 100px;
@@ -150,5 +153,16 @@
       padding-top: 52px;
       background-color: @grey;
     }
+  }
+}
+
+.popup__button {
+  &:hover {
+    background-color: @green-dark;
+  }
+
+  &:active {
+    background-color: @green-dark;
+    color: fade(@white, 30%);
   }
 }
