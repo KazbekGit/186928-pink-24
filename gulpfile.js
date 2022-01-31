@@ -49,7 +49,7 @@ const optimizeImages = () => {
 }
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg,ico}')
     .pipe(gulp.dest('build/img'))
 }
 
@@ -60,6 +60,10 @@ const createWebp = () => {
     }))
     .pipe(gulp.dest('build/img'))
 }
+
+const fav = () =>
+  gulp.src(['./manifest.webmanifest','source/img/favicons/favicon.ico'])
+    .pipe(gulp.dest('build/'));
 
 const svg = () =>
   gulp.src(['source/img/*.svg', '!source/img/sprites/*.svg', '!source/img/sprites.svg'])
@@ -127,6 +131,7 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
+  fav,
   gulp.parallel(
     styles,
     html,
@@ -143,6 +148,7 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
+  fav,
   gulp.parallel(
     styles,
     html,
