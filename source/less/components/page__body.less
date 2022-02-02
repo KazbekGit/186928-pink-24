@@ -50,3 +50,15 @@ textarea {
     display: inline;
   }
 }
+
+.page-body__br-mobile-and-desktop {
+  display: none;
+
+  @media (width: @mobile-width-only) {
+    display: inline;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline;
+  }
+}
